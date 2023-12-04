@@ -1,6 +1,5 @@
 package dev.shadowsoffire.apotheosis;
 
-import dev.shadowsoffire.apotheosis.adventure.client.AdventureModuleClient;
 import dev.shadowsoffire.apotheosis.ench.EnchModuleClient;
 import dev.shadowsoffire.apotheosis.potion.PotionModuleClient;
 import dev.shadowsoffire.apotheosis.spawn.SpawnerModuleClient;
@@ -13,7 +12,6 @@ public class ApotheosisClient implements ClientModInitializer {
         if (Apotheosis.enableVillage) VillageModuleClient.init();
         if (Apotheosis.enableSpawner) SpawnerModuleClient.init();
         if (Apotheosis.enableEnch) EnchModuleClient.init();
-        if (Apotheosis.enablePotion) PotionModuleClient.init();;
-        if (Apotheosis.enableAdventure) AdventureModuleClient.init();
+        if (Apotheosis.enablePotion) PotionModuleClient.init();
     }
 }

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "zenith",
   "version": "${version}",
-  "name": "Zenith",
-  "description": "Unofficial Fabric port of Apotheosis.",
+  "name": "Zenith Youth",
+  "description": "Zenith\\u9752\\u6625\\u7248\\uff0c\\u53bb\\u9664\\u4e86\\u5192\\u9669\\u6a21\\u5757\\uff0c\\u4e0d\\u518d\\u4f9d\\u8d56 ZenithAttributes\n\nUnofficial Fabric port of Apotheosis.",
   "authors": [
     "Safro (original port)",
     "ShadowsOfFire (Forge)",
@@ -11,8 +11,8 @@
   ],
   "contact": {
     "homepage": "https://curseforge.com/minecraft/mc-mods/zenith",
-    "sources": "https://github.com/thewinabagel/Zenith",
-    "issues": "https://github.com/thewinabagel/Zenith/issues"
+    "sources": "https://github.com/LangYueMc/Zenith",
+    "issues": "https://github.com/LangYueMc/Zenith/issues"
   },
   "license": "MIT License",
   "icon": "assets/zenith/icon.png",
@@ -26,14 +26,12 @@
     ],
     "jade": [
       "dev.shadowsoffire.apotheosis.spawn.compat.SpawnerJadePlugin",
-      "dev.shadowsoffire.apotheosis.ench.compat.EnchJadePlugin",
-      "dev.shadowsoffire.apotheosis.adventure.compat.AdventureJadePlugin"
+      "dev.shadowsoffire.apotheosis.ench.compat.EnchJadePlugin"
     ],
     "rei_client": [
       "dev.shadowsoffire.apotheosis.garden.compat.GardenREIPlugin",
       "dev.shadowsoffire.apotheosis.ench.compat.EnchantingREIPlugin",
       "dev.shadowsoffire.apotheosis.spawn.compat.SpawnerREIPlugin",
-      "dev.shadowsoffire.apotheosis.adventure.compat.AdventureREIPlugin",
       "dev.shadowsoffire.apotheosis.village.compat.VillageREIPlugin",
       "dev.shadowsoffire.apotheosis.potion.compat.PotionREIPlugin"
     ],
@@ -53,12 +51,11 @@
     "fabric": "*",
     "minecraft": "1.20.1",
     "java": ">=17",
-    "fakerlib": ">=0.0.8",
-    "zenith_attributes": ">=0.1.1"
+    "fakerlib": ">=0.0.8"
   },
   "suggests": {
     "roughlyenoughitems": "*",
     "patchouli": "*"
   },
-    "accessWidener": "zenith.aw"
+  "accessWidener": "zenith.aw"
 }

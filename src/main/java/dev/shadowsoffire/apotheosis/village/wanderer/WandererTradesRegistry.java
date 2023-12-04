@@ -1,7 +1,6 @@
 package dev.shadowsoffire.apotheosis.village.wanderer;
 
 import dev.shadowsoffire.apotheosis.Apotheosis;
-import dev.shadowsoffire.apotheosis.adventure.affix.trades.AffixTrade;
 import dev.shadowsoffire.apotheosis.village.VillageModule;
 import dev.shadowsoffire.apotheosis.village.util.BasicItemListing;
 import dev.shadowsoffire.placebo.reload.DynamicRegistry;
@@ -28,7 +27,6 @@ public class WandererTradesRegistry extends DynamicRegistry<JsonTrade> {
     @Override
     protected void registerBuiltinCodecs() {
         this.registerDefaultCodec(Apotheosis.loc("basic_trade"), WandererTrade.CODEC);
-        this.registerCodec(Apotheosis.loc("affix"), AffixTrade.CODEC);
     }
 
     @Override

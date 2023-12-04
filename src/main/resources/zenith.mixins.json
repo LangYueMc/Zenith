@@ -5,17 +5,7 @@
   "plugin": "dev.shadowsoffire.apotheosis.mixin.compat.Plugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "adventure.BlockMixin",
-    "adventure.BowItemMixin",
-    "adventure.CrossbowItemMixin",
-    "adventure.EnchantmentHelperMixinAdventure",
-    "adventure.ItemStackMixin",
-    "adventure.LivingEntityInvoker",
-    "adventure.LivingEntityMixin",
-    "adventure.MHFMixinLivingEntity",
-    "adventure.PlayerMixin",
-    "adventure.RangedAttributeAccessor",
-    "adventure.SmithingMenuMixin",
+    "LivingEntityMixin",
     "compat.dragonloot.present.BowItemMixinDragonLoot",
     "compat.dragonloot.present.CrossbowItemMixinDragonLoot",
     "compat.dragonloot.present.DragonBowItemMixin",
@@ -65,10 +55,7 @@
   "client": [
     "client.AnvilScreenMixin",
     "client.EnchantmentScreenMixin",
-    "client.GuiMixin",
-    "util.events.AbstractContainerScreenMixin",
     "util.events.GuiGraphicsMixin",
-    "util.events.ModelBakeryMixin",
-    "util.events.ModelManagerMixin"
+    "util.events.ModelBakeryMixin"
   ]
 }

@@ -1,13 +1,13 @@
 {
     "name": "饰品",
-    "icon": "curios:textures/slot/empty_charm_slot.png",
+    "icon": "trinkets:textures/gui/slots/charm.png",
     "category": "zenith:potion/charms",
 	"flag": "&zenith:potion,zenith:curiosloaded",
 	"sortnum": 1,
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "当你安装了$(9)饰品（Curios）$()模组后，你可以在$(9)护符$()栏位装备药水护符。$(p)它们的工作方式和在物品栏中一样。"
+            "text": "当你安装了$(9)饰品（Trinkets）$()模组后，你可以在$(9)护符$()栏位装备药水护符。$(p)它们的工作方式和在物品栏中一样。"
         }
 	]
 }

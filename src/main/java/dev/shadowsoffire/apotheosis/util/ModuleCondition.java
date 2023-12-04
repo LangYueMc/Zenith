@@ -17,7 +17,7 @@ public class ModuleCondition implements ConditionJsonProvider {
     static {
         types.put("spawner", () -> Apotheosis.enableSpawner);
         types.put("garden", () -> Apotheosis.enableGarden);
-        types.put("adventure", () -> Apotheosis.enableAdventure);
+        types.put("adventure", () -> false);
         types.put("enchantment", () -> Apotheosis.enableEnch);
         types.put("potion", () -> Apotheosis.enablePotion);
         types.put("village", () -> Apotheosis.enableVillage);

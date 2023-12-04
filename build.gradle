@@ -46,19 +46,6 @@ repositories {
 	}
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 
-	maven {
-		name = "MrCrayfish (GitHub)"
-		url = "https://maven.pkg.github.com/MrCrayfish/Maven"
-		credentials {
-			//username = project.findProperty("gpr.user") ?: System.getenv("GH_ID")
-			username = project.findProperty("gpr.user") ?: "gogglebobby@gmail.com"
-			password = project.findProperty("gpr.key") ?: System.getenv("GH_TOKEN")
-		}
-		content {
-			includeGroup "com.mrcrayfish"
-		}
-	}
-
 	mavenLocal()
 }
 
@@ -71,8 +58,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation( "dev.shadowsoffire.placebo:placebo-fabric-1.20.1:${project.fakerlib_version}")
-	modImplementation( "dev.bagel:ZenithAttributes:${project.zenith_attributes_version}")
+	modImplementation "curse.maven:fakerlib-853197:4853710"
 
 	// Mixin Extras + Mixin^2 for mod compat
 	implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.2.0-beta.10"))
@@ -149,17 +135,14 @@ dependencies {
 	//modImplementation "maven.modrinth:aquamirae:ouUaC54p"
 
 	modCompileOnly "curse.maven:puzzles-lib-495476:4847147"
-	modCompileOnly "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:8.0.0"
+	modCompileOnly "curse.maven:forge-config-api-port-fabric-547434:4583000"
 
 	modCompileOnly "curse.maven:dragonloot-424480:4656260"
 
 	modCompileOnly "curse.maven:mariums-soulslike-weaponry-632066:4891244"
 	//modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:4.2"
 
-	modImplementation "com.mrcrayfish:framework-fabric:1.20.1-0.6.13"
-	modRuntimeOnly "com.mrcrayfish:catalogue-fabric:1.20.1-1.7.1"
-	modImplementation "com.mrcrayfish:goblintraders-fabric:1.20.1-1.9.3"
-
+	modCompileOnly "curse.maven:goblintraders-fabric-667389:4802504"
 }
 loom {
 	accessWidenerPath = file("src/main/resources/zenith.aw")

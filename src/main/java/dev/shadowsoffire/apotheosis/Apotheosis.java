@@ -1,24 +1,18 @@
 package dev.shadowsoffire.apotheosis;
 
 import dev.shadowsoffire.apotheosis.advancements.AdvancementTriggers;
-import dev.shadowsoffire.apotheosis.adventure.Adventure;
-import dev.shadowsoffire.apotheosis.adventure.AdventureModule;
 import dev.shadowsoffire.apotheosis.compat.PatchouliCompat;
 import dev.shadowsoffire.apotheosis.ench.EnchModule;
 import dev.shadowsoffire.apotheosis.garden.GardenModule;
 import dev.shadowsoffire.apotheosis.potion.PotionModule;
 import dev.shadowsoffire.apotheosis.spawn.SpawnerModule;
-import dev.shadowsoffire.apotheosis.util.DummyLootModifier;
 import dev.shadowsoffire.apotheosis.util.Events;
 import dev.shadowsoffire.apotheosis.util.ModuleCondition;
 import dev.shadowsoffire.apotheosis.village.VillageModule;
 import dev.shadowsoffire.placebo.config.Configuration;
-
-import io.github.fabricators_of_create.porting_lib.loot.PortingLibLoot;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 
 import java.io.File;
@@ -30,7 +24,6 @@ public class Apotheosis implements ModInitializer {
     public static File configDir;
     public static Configuration config;
     public static boolean enableEnch = true;
-    public static boolean enableAdventure = true;
     public static boolean enableSpawner = true;
     public static boolean enablePotion = true;
     public static boolean enableVillage = true;
@@ -45,7 +38,6 @@ public class Apotheosis implements ModInitializer {
         if (enableEnch) EnchModule.init();
         if (enableSpawner) SpawnerModule.init();
         if (enableGarden) GardenModule.init();
-        if (enableAdventure) AdventureModule.init();
         if (enablePotion) PotionModule.init();
         if (enableVillage) {
             VillageModule.init();
@@ -65,7 +57,6 @@ public class Apotheosis implements ModInitializer {
         configDir = new File(FabricLoader.getInstance().getConfigDir().toFile(), MODID);
         config = new Configuration(new File(configDir, MODID + ".cfg"));
         enableEnch = config.getBoolean("Enable Enchantment Module", "general", true, "If the enchantment module is enabled.");
-        enableAdventure = config.getBoolean("Enable Adventure Module", "general", true, "If the adventure module is loaded.");
         enableSpawner = config.getBoolean("Enable Spawner Module", "general", true, "If the spawner module is enabled.");
         enablePotion = config.getBoolean("Enable Potion Module", "general", true, "If the potion module is loaded.");
         enableVillage = config.getBoolean("Enable Village Module", "general", true, "If the village module is loaded.");
@@ -76,6 +67,7 @@ public class Apotheosis implements ModInitializer {
         config.setComment("This file allows individual modules of Zenith to be enabled or disabled.\nChanges will have no effect until the next game restart.\nThis file must match on client and server.\nReport any issues found to https://github.com/TheWinABagel/Zenith/issues, not to Apotheosis!");
         if (config.hasChanged()) config.save();
     }
+
     public static ResourceLocation loc(String id) {
         return new ResourceLocation(MODID, id);
     }

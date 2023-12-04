@@ -1,4 +1,14 @@
-# Zenith
+# Zenith Youth
+
+Zenith Youth 是去除了冒险模块的版本，请不要像 Zenith 报告问题。
+
+Zenith Youth is a version without the adventure module, please do not report issues to Zenith.
+
+本仓库未添加任何实质性代码，依照 MIT 协议分发。
+
+This repository does not add any substantive code and is distributed under the MIT license.
+
+---
 
 https://www.curseforge.com/minecraft/mc-mods/zenith
 
